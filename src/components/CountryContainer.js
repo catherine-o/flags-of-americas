@@ -9,7 +9,7 @@ class CountryContainer extends Component {
         flag: ''
     }
 
-    countryNames = () => {
+    countryFlags = () => {
         return this.props.countries.map(country => (
             <li><img className='flag'
                 onClick={this.updateCountry}
@@ -37,7 +37,7 @@ class CountryContainer extends Component {
         return (
             <div>
                 <h1>{this.state.selectedCountry}</h1>
-                <ul className='flagsList'>{this.countryNames()}</ul>
+                <ul className='flagsList'>{this.countryFlags()}</ul>
                 <CountryCard 
                     selectedCountry={this.state.selectedCountry}
                 />
