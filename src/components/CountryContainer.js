@@ -3,10 +3,8 @@ import CountryCard from './CountryCard'
 
 class CountryContainer extends Component {
     state = {
-        selectedCountry: 'Select a Flag',
-        name: '',
-        language: '',
-        flag: ''
+        selectedCountry: '',
+        language: ''
     }
 
     countryFlags = () => {
@@ -14,33 +12,29 @@ class CountryContainer extends Component {
             <img className='flag'
                 onClick={this.updateCountry}
                 src={country.flag}
-                name={country.name}></img>
-
+                name={country.name}
+                data-language={country.language}></img>
         ))
     }
 
     updateCountry = (event) => {
-        let clickedCountry = event.target.name
-        let selected = this.props.countries.filter(country => {
-            country.name = clickedCountry
-        })
         this.setState({
-            name: selected.name,
-            language: selected.language,
-            flag: selected.flag
+            selectedCountry: event.target.name,
+            language: event.target.dataLanguage
         })
-        console.log(this.state.name)
     }
 
 
     render() {
         return (
             <div>
-                <h1>{this.state.selectedCountry}</h1>
-                <div className='flagsList'>{this.countryFlags()}</div>
+                <h2>Select a Flag</h2>
                 <CountryCard 
                     selectedCountry={this.state.selectedCountry}
+                    language={this.state.language}
                 />
+                <div className='flagsList'>{this.countryFlags()}</div>
+                
             </div>
         )
     }
