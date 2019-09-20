@@ -19,13 +19,13 @@ class CountryContainer extends Component {
         this.setState({
             selectedCountry: event.target.name
         })
+        let container = document.querySelector('.flags-container')
     }
 
 
     render() {
         return (
-            <div>
-                <h2>Select a Flag</h2>
+            <div className='flags-container'>
                 <CountryCard 
                     selectedCountry={this.state.selectedCountry}
                 />

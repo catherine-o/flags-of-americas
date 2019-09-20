@@ -18,10 +18,13 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <h1>The Americas</h1>
+      <>
+        <header>
+          <h1>The Americas</h1>
+          <h2>Select a Flag</h2>
+        </header>
         <CountryContainer countries={this.state.countries} />
-      </div>
+      </>
     )
   }
   

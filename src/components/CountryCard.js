@@ -4,7 +4,7 @@ class CountryCard extends Component {
 
     render() {
         return (
-            <div>
+            <div className='country-name'>
                 <h3>Name: {this.props.selectedCountry}</h3>
             </div>
         )
