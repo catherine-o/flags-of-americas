@@ -3,7 +3,7 @@ body {
 }
 
 header {
-    padding-left: 45px;
+    padding-left: 65px;
     position: fixed;
     background-color: white;
     width: 100%;
@@ -20,7 +20,7 @@ header {
 }
 
 .flags-container {
-    padding: 110px 0px 0px 50px;
+    padding: 110px 0px 0px 105px;
     
 }
  
